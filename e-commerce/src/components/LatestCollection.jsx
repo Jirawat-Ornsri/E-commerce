@@ -6,12 +6,10 @@ import ProductItem from "./ProductItem";
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
 
-  console.log(products)
-
-  const { latestProducts, setLatestProducts } = useState([]);
+  const [ latestProducts, setLatestProducts ] = useState([]);
 
   useEffect(() => {
-    setLatestProducts(products);
+    setLatestProducts(products.slice(0,10));
   }, []);
 
   return (
