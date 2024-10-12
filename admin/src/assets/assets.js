@@ -5,6 +5,7 @@ import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.svg'
 import remove_icon from './remove.png'
 import edit_icon from './edit.png'
+import list_icon from './list_icon.png'
 
 export const assets = {
     logo,
@@ -14,5 +15,6 @@ export const assets = {
     parcel_icon,
     remove_icon,
     edit_icon,
+    list_icon
 }
 

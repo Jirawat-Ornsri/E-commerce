@@ -66,8 +66,9 @@ const List = ({token}) => {
               <p>{item.category}</p>
               <p>{currency}{item.price}</p>
               {/* <p onClick={()=> removeProduct(item._id)} className="text-right md:text-center cursor-pointer text-lg">x</p> */}
-              <div className="flex justify-evenly">
-                <img className="w-4 cursor-pointer" src={assets.edit_icon} alt="" />
+              <div className="block md:hidden"></div>
+              <div className="flex justify-start md:justify-center">
+                <img className="w-4 cursor-pointer mr-4" src={assets.edit_icon} alt="" />
                 <img onClick={()=> removeProduct(item._id)} className="w-4 cursor-pointer" src={assets.remove_icon} alt="" />
               </div>
            
