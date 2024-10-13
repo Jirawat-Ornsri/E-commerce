@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/shopContext";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
+import { ShopContext } from "../context/ShopContext";
 
 const RelatedProducts = ({ category, subCategory }) => {
   const { products } = useContext(ShopContext);
@@ -31,7 +31,7 @@ const RelatedProducts = ({ category, subCategory }) => {
           <ProductItem
             key={index}
             id={item._id}
-            image={item.image}
+            images={item.images}
             name={item.name}
             price={item.price}
           />

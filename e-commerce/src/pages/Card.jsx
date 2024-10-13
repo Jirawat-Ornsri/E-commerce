@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ShopContext } from "../context/shopContext";
 import Title from "../components/Title";
 import { assets } from "../assets/frontend_assets/assets";
 import CartTotal from "../components/CartTotal";
+import { ShopContext } from "../context/ShopContext";
 
 const Card = () => {
   const { products, currency, cartItems, updateQuantity, navigate } =
@@ -46,7 +46,7 @@ const Card = () => {
               <div className="flex items-start gap-6">
                 <img
                   className="w-16 sm:w-20"
-                  src={productData.image[0]}
+                  src={productData.images[0]}
                   alt=""
                 />
                 <div>

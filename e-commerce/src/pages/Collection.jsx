@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { ShopContext } from "../context/shopContext";
 import { assets } from "../assets/frontend_assets/assets";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
+import { ShopContext } from "../context/ShopContext";
 
 const Collection = () => {
   const { products, search, showSearch } = useContext(ShopContext);
@@ -45,7 +45,7 @@ const Collection = () => {
 
     if (subCategory.length > 0) {
       productCopy = productCopy.filter((item) =>
-        subCategory.includes(item.subCategory)
+        subCategory.includes(item.subcategory)
       );
     }
 
@@ -73,7 +73,7 @@ const Collection = () => {
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, search, showSearch]);
+  }, [category, subCategory, search, showSearch, products]);
 
   useEffect(() => {
     sortProducts();
@@ -195,7 +195,7 @@ const Collection = () => {
               name={item.name}
               id={item._id}
               price={item.price}
-              image={item.image}
+              images={item.images}
             />
           ))}
         </div>
