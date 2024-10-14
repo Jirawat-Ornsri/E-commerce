@@ -20,7 +20,7 @@ app.use(cors());
 // api endpoint
 app.use('/api/user', userRouter)
 app.use('/api/product', productRouter)
-app.use('api/cart', cartRouter)
+app.use('/api/cart', cartRouter)
 
 // api endpoints
 app.get('/',(req,res)=>{
